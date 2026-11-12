@@ -1,0 +1,9 @@
+project: savantenvs/ygopro
+target: fuzz_lflist
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_lflist/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_lflist
+    libfuzzer: true
+    timeout: 10

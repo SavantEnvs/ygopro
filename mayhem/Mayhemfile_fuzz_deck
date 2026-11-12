@@ -1,0 +1,9 @@
+project: savantenvs/ygopro
+target: fuzz_deck
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_deck/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_deck
+    libfuzzer: true
+    timeout: 10
